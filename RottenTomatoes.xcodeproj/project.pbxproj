@@ -13,6 +13,7 @@
 		849B6AE71B9388FD00ADDBA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849B6AE61B9388FD00ADDBA3 /* Images.xcassets */; };
 		849B6AEA1B9388FD00ADDBA3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B6AE81B9388FD00ADDBA3 /* LaunchScreen.xib */; };
 		849B6AF61B9388FD00ADDBA3 /* RottenTomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B6AF51B9388FD00ADDBA3 /* RottenTomatoesTests.swift */; };
+		84A08B421B939A62004D7B7E /* GlobalConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A08B411B939A62004D7B7E /* GlobalConfig.swift */; };
 		88A6D5D84A878A75D7AB54AB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9AEBE3739CE67A77FE2FD8 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		849B6AEF1B9388FD00ADDBA3 /* RottenTomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenTomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B6AF41B9388FD00ADDBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849B6AF51B9388FD00ADDBA3 /* RottenTomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenTomatoesTests.swift; sourceTree = "<group>"; };
+		84A08B411B939A62004D7B7E /* GlobalConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConfig.swift; sourceTree = "<group>"; };
 		8A9AEBE3739CE67A77FE2FD8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43B2B769B45A881D0DF0127 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				849B6AE61B9388FD00ADDBA3 /* Images.xcassets */,
 				849B6AE81B9388FD00ADDBA3 /* LaunchScreen.xib */,
 				849B6ADD1B9388FD00ADDBA3 /* Supporting Files */,
+				84A08B411B939A62004D7B7E /* GlobalConfig.swift */,
 			);
 			path = RottenTomatoes;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				849B6AE21B9388FD00ADDBA3 /* ViewController.swift in Sources */,
 				849B6AE01B9388FD00ADDBA3 /* AppDelegate.swift in Sources */,
+				84A08B421B939A62004D7B7E /* GlobalConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Cosmos.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>EEA6D5BDE48B5C997467B4A951D10F3B</key>
+		<key>AB63A69B2577C4CC95A56F5E46955085</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F08B3D1B65E5B948442573B156E17D56</key>
+		<key>F335A7343BDF2D2DBBF23C6C0E1A22AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F38A0BC180AE77EB5BFED2A04262A919</key>
 		<dict>
 			<key>primary</key>
 			<true/>
