@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		840C56C91B9499590052373E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56C81B9499590052373E /* MovieCell.swift */; };
 		840C56CB1B949A1D0052373E /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56CA1B949A1D0052373E /* MoviesTableViewController.swift */; };
+		840C56CE1B94AC130052373E /* DVDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56CD1B94AC130052373E /* DVDTableViewController.swift */; };
+		840C56D11B94AEED0052373E /* DVDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56D01B94AEED0052373E /* DVDCell.swift */; };
 		849B6AE01B9388FD00ADDBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B6ADF1B9388FD00ADDBA3 /* AppDelegate.swift */; };
 		849B6AE51B9388FD00ADDBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B6AE31B9388FD00ADDBA3 /* Main.storyboard */; };
 		849B6AE71B9388FD00ADDBA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849B6AE61B9388FD00ADDBA3 /* Images.xcassets */; };
@@ -32,6 +34,8 @@
 		7D1814B8A3F3AA53ED182C3F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		840C56C81B9499590052373E /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		840C56CA1B949A1D0052373E /* MoviesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		840C56CD1B94AC130052373E /* DVDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDTableViewController.swift; sourceTree = "<group>"; };
+		840C56D01B94AEED0052373E /* DVDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDCell.swift; sourceTree = "<group>"; };
 		849B6ADA1B9388FD00ADDBA3 /* RottenTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B6ADE1B9388FD00ADDBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849B6ADF1B9388FD00ADDBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,14 @@
 			name = MovieCell;
 			sourceTree = "<group>";
 		};
+		840C56CF1B94AED90052373E /* DVDCell */ = {
+			isa = PBXGroup;
+			children = (
+				840C56D01B94AEED0052373E /* DVDCell.swift */,
+			);
+			name = DVDCell;
+			sourceTree = "<group>";
+		};
 		849B6AD11B9388FD00ADDBA3 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +125,7 @@
 		849B6ADC1B9388FD00ADDBA3 /* RottenTomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				840C56CF1B94AED90052373E /* DVDCell */,
 				840C56C71B94990D0052373E /* MovieCell */,
 				849B6ADF1B9388FD00ADDBA3 /* AppDelegate.swift */,
 				849B6AE31B9388FD00ADDBA3 /* Main.storyboard */,
@@ -121,6 +134,7 @@
 				849B6ADD1B9388FD00ADDBA3 /* Supporting Files */,
 				84A08B411B939A62004D7B7E /* GlobalConfig.swift */,
 				840C56CA1B949A1D0052373E /* MoviesTableViewController.swift */,
+				840C56CD1B94AC130052373E /* DVDTableViewController.swift */,
 			);
 			path = RottenTomatoes;
 			sourceTree = "<group>";
@@ -301,10 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840C56D11B94AEED0052373E /* DVDCell.swift in Sources */,
 				840C56CB1B949A1D0052373E /* MoviesTableViewController.swift in Sources */,
 				849B6AE01B9388FD00ADDBA3 /* AppDelegate.swift in Sources */,
 				840C56C91B9499590052373E /* MovieCell.swift in Sources */,
 				84A08B421B939A62004D7B7E /* GlobalConfig.swift in Sources */,
+				840C56CE1B94AC130052373E /* DVDTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

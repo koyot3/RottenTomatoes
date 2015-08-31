@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1wQ-gW-iiF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x8k-bz-li5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -8,7 +8,7 @@
         <scene sceneID="x7d-8R-a6h">
             <objects>
                 <tableViewController id="wFh-u5-VVg" customClass="MoviesTableViewController" customModule="RottenTomatoes" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="218" sectionHeaderHeight="22" sectionFooterHeight="22" id="uYA-aH-WQg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="218" sectionHeaderHeight="22" sectionFooterHeight="22" id="uYA-aH-WQg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -23,7 +23,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="218" id="PWh-gH-bVF" customClass="MovieCell" customModule="RottenTomatoes" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="218" id="PWh-gH-bVF" customClass="MovieCell" customModule="RottenTomatoes" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PWh-gH-bVF" id="oCN-fc-Ees">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -58,6 +58,7 @@
                                     <outlet property="synopsys" destination="tM2-3g-HHH" id="8so-Jh-bpI"/>
                                     <outlet property="title" destination="ImF-tG-Hch" id="7XA-zA-LAu"/>
                                     <outlet property="year" destination="PAU-dU-cAE" id="8hv-y6-veM"/>
+                                    <segue destination="s1k-dH-b3e" kind="push" id="xVy-zw-QAt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -71,12 +72,140 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3B-d3-brG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="893.5" y="199.5"/>
+            <point key="canvasLocation" x="-928.5" y="1216.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Crossroad-->
+        <scene sceneID="Bjl-Rl-rOl">
+            <objects>
+                <viewController id="s1k-dH-b3e" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1cz-UM-qg2"/>
+                        <viewControllerLayoutGuide type="bottom" id="yim-hG-i1v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dt9-VK-eej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Crossroad" id="pGQ-IJ-zzg">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="5dB-9S-zyJ"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXm-gL-Frb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1359.5" y="1087.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hUo-6y-eCC">
+            <objects>
+                <tabBarController id="x8k-bz-li5" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="U16-H1-aW6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1wQ-gW-iiF" kind="relationship" relationship="viewControllers" id="uWi-ZJ-Cpi"/>
+                        <segue destination="I5r-FG-Fkp" kind="relationship" relationship="viewControllers" id="2Sn-N0-6QC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1f-0g-iev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-946" y="-460"/>
+        </scene>
+        <!--Top DVDs-->
+        <scene sceneID="kos-Dx-8f9">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTs-MV-qYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController title="Top DVDs" id="4Ae-C5-wSc" customClass="DVDTableViewController" customModule="RottenTomatoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="168" sectionHeaderHeight="22" sectionFooterHeight="22" id="zsS-eh-g9r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="1rz-7K-tEU">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8wq-P6-l2M">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DVDCell" id="adM-2D-TDa" customClass="DVDCell" customModule="RottenTomatoes" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="adM-2D-TDa" id="pNK-yS-ERg">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2RQ-QM-ADC">
+                                            <rect key="frame" x="8" y="0.0" width="136" height="168"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jT-QD-CH0">
+                                            <rect key="frame" x="152" y="0.0" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6f-A1-0pa">
+                                            <rect key="frame" x="152" y="29" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fZ-bj-nQp">
+                                            <rect key="frame" x="152" y="58" width="215" height="102"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="poster" destination="pNK-yS-ERg" id="slg-2l-2I1"/>
+                                    <outlet property="synponys" destination="2fZ-bj-nQp" id="Cz4-GA-ag9"/>
+                                    <outlet property="title" destination="2jT-QD-CH0" id="jYy-6a-azv"/>
+                                    <outlet property="year" destination="T6f-A1-0pa" id="qE9-Ct-btJ"/>
+                                    <segue destination="s1k-dH-b3e" kind="show" id="LnH-uO-zh5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Ae-C5-wSc" id="KDl-kP-v1m"/>
+                            <outlet property="delegate" destination="4Ae-C5-wSc" id="CgP-5d-LyR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Top DVDs" id="9zl-0b-wbK"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="-1725.5" y="517.5"/>
+        </scene>
+        <!--Top DVDs-->
+        <scene sceneID="5FD-ll-QVl">
+            <objects>
+                <navigationController title="Top DVDs" id="I5r-FG-Fkp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="DVDs" id="bTg-Ir-47d"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZAI-hr-eSe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Ae-C5-wSc" kind="relationship" relationship="rootViewController" id="7tS-xA-DEi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyQ-7v-5hK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1215.5" y="341.5"/>
+        </scene>
+        <!--Movies-->
         <scene sceneID="kRE-gU-yp2">
             <objects>
                 <navigationController id="1wQ-gW-iiF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Movies" id="utO-Nt-KGT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tLB-hc-C4S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -88,7 +217,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfe-7h-Iaf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-172" y="239"/>
+            <point key="canvasLocation" x="-606.5" y="364.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LnH-uO-zh5"/>
+    </inferredMetricsTieBreakers>
 </document>

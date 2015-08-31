@@ -1,5 +1,5 @@
 //
-//  MoviesTableViewController.swift
+//  DVDTableViewController.swift
 //  RottenTomatoes
 //
 //  Created by admin on 8/31/15.
@@ -7,12 +7,10 @@
 //
 
 import UIKit
-import AFNetworking
 
-class MoviesTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class DVDTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
-    var movies:NSDictionary!
-    
+    var dvds:NSDictionary!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,10 +44,12 @@ class MoviesTableViewController: UITableViewController, UITableViewDelegate, UIT
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
-        cell.title.text = "Hello World"
+        let cell = tableView.dequeueReusableCellWithIdentifier("DVDCell", forIndexPath: indexPath) as! DVDCell
+
+        // Configure the cell...
+        cell.title.text = "DVD"
         cell.year.text = "2015"
-        cell.synopsys.text = "Xin chao"
+        cell.synponys.text = "DVD hello hi"
 
         return cell
     }

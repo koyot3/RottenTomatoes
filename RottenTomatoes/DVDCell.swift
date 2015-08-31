@@ -1,5 +1,5 @@
 //
-//  MovieCell.swift
+//  DVDCell.swift
 //  RottenTomatoes
 //
 //  Created by admin on 8/31/15.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MovieCell: UITableViewCell {
+class DVDCell: UITableViewCell {
 
-    @IBOutlet weak var poster: UIImageView!
+    @IBOutlet weak var poster: UIView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var year: UILabel!
-    @IBOutlet weak var synopsys: UILabel!
+    @IBOutlet weak var synponys: UILabel!
     
     var item:NSDictionary!
     
