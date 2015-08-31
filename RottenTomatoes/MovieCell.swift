@@ -8,13 +8,16 @@
 
 import UIKit
 import AFNetworking
+import RateView
 
-class MovieCell: UITableViewCell {
+class MovieCell: UITableViewCell, RateViewDelegate {
 
     @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var synopsys: UILabel!
+    
+    @IBOutlet weak var rateView: RateView!
     
     var item:NSDictionary!
     
@@ -35,7 +38,13 @@ class MovieCell: UITableViewCell {
             year.text = (String) (item.valueForKeyPath("year") as! Int)
             synopsys.text = item.valueForKeyPath("synopsis") as? String
             poster.setImageWithURL(NSURL(string:item.valueForKeyPath("posters.thumbnail") as! String)!)
-        }
+        }        
+        rateView = RateView(rating: 3.7)
+    }
+    
+
+    func rateView(rateView: RateView!, didUpdateRating rating: Float) {
+        
     }
 
 }

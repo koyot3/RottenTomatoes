@@ -39,8 +39,8 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tM2-3g-HHH">
                                             <rect key="frame" x="166" y="66" width="201" height="143"/>
-                                            <mutableString key="text">Continuing the global exploits in the unstoppable franchise built on speed, Vin Diesel, Paul Walker and Dwayne Johnson lead the returning cast of Fast &amp; Furious 7. James Wan directs this chapter of the hugely successful series that also welcomes back favorites Michelle Rodriguez, Jordana Brewster, Tyrese Gibson, Chris "Ludacris" Bridges, Elsa Pataky and Lucas Black. They are joined by international action stars new to the franchise including Jason Statham, Djimon Hounsou, Tony Jaa, Ronda Rousey and Kurt Russell.
-</mutableString>
+                                            <string key="text">Continuing the global exploits in the unstoppable franchise built on speed, Vin Diesel, Paul Walker and Dwayne Johnson lead the returning cast of Fast &amp; Furious 7. James Wan directs this chapter of the hugely successful series that also welcomes back favorites Michelle Rodriguez, Jordana Brewster, Tyrese Gibson, Chris "Ludacris" Bridges, Elsa Pataky and Lucas Black. They are joined by international action stars new to the franchise including Jason Statham, Djimon Hounsou, Tony Jaa, Ronda Rousey and Kurt Russell.
+</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -51,10 +51,15 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXp-jF-4N1" customClass="RateView">
+                                            <rect key="frame" x="206" y="31" width="161" height="33"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="poster" destination="bL0-zi-2JH" id="AO5-yZ-J4p"/>
+                                    <outlet property="rateView" destination="GXp-jF-4N1" id="kQD-fT-4gr"/>
                                     <outlet property="synopsys" destination="tM2-3g-HHH" id="8so-Jh-bpI"/>
                                     <outlet property="title" destination="ImF-tG-Hch" id="7XA-zA-LAu"/>
                                     <outlet property="year" destination="PAU-dU-cAE" id="8hv-y6-veM"/>
@@ -69,6 +74,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Top Movies" id="i48-b1-kaw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="QqL-Lt-W0F">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3B-d3-brG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,7 +155,6 @@
         <!--Top DVDs-->
         <scene sceneID="kos-Dx-8f9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oTs-MV-qYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Top DVDs" id="4Ae-C5-wSc" customClass="DVDTableViewController" customModule="RottenTomatoes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="168" sectionHeaderHeight="22" sectionFooterHeight="22" id="zsS-eh-g9r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -189,10 +196,15 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uq8-Ec-mTX" customClass="RateView">
+                                            <rect key="frame" x="206" y="23" width="161" height="33"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="poster" destination="2RQ-QM-ADC" id="Vxy-Ns-GzZ"/>
+                                    <outlet property="rateView" destination="uq8-Ec-mTX" id="MPV-YI-XhA"/>
                                     <outlet property="synponys" destination="2fZ-bj-nQp" id="Cz4-GA-ag9"/>
                                     <outlet property="title" destination="2jT-QD-CH0" id="jYy-6a-azv"/>
                                     <outlet property="year" destination="T6f-A1-0pa" id="qE9-Ct-btJ"/>
@@ -207,7 +219,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Top DVDs" id="9zl-0b-wbK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="6A7-6T-g07">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTs-MV-qYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1215.5" y="1168.5"/>
         </scene>

@@ -8,6 +8,7 @@
 
 import UIKit
 import AFNetworking
+import RateView
 
 class DVDCell: UITableViewCell {
 
@@ -15,6 +16,7 @@ class DVDCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var synponys: UILabel!
+    @IBOutlet weak var rateView: RateView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +34,7 @@ class DVDCell: UITableViewCell {
             year.text = (String) (item.valueForKeyPath("year") as! Int)
             synponys.text = item.valueForKeyPath("synopsis") as? String
             poster.setImageWithURL(NSURL(string:item.valueForKeyPath("posters.thumbnail") as! String)!)
+            rateView = RateView(rating: 3.7);
         }
     }
 

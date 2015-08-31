@@ -3,3 +3,4 @@ use_frameworks!
 
 pod 'AFNetworking', '~> 2.0'
 pod 'JTProgressHUD’
+pod 'RateView'

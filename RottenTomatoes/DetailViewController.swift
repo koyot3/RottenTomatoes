@@ -8,6 +8,7 @@
 
 import UIKit
 import AFNetworking
+import JTProgressHUD
 
 class DetailViewController: UIViewController {
 
@@ -26,6 +27,7 @@ class DetailViewController: UIViewController {
             synopys.text = item.valueForKeyPath("synopsis") as? String
             poster.setImageWithURL(NSURL(string:item.valueForKeyPath("posters.thumbnail") as! String)!)
         }
+        JTProgressHUD.hide()
     }
 
     override func didReceiveMemoryWarning() {

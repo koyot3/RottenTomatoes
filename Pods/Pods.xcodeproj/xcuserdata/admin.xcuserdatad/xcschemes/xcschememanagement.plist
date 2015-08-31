@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JTProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RateView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>114C3C469FBD7CD8BE75ED8759D56D95</key>
+		<key>36D1D99197CCE4AD31ED8E141DCF9C0C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F08B3D1B65E5B948442573B156E17D56</key>
+		<key>A9D13450BDA309DFFB55A841A9618162</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBFA9312547E71973FEB117C688B0C0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F95FFAFE2FD466F62AE71051ECFFAC02</key>
 		<dict>
 			<key>primary</key>
 			<true/>

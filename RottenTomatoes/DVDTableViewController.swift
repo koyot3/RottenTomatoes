@@ -8,10 +8,11 @@
 
 import UIKit
 import AFNetworking
+import JTProgressHUD
 
-class DVDTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-
+class DVDTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     var dvds:NSArray!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
@@ -27,6 +28,10 @@ class DVDTableViewController: UITableViewController, UITableViewDelegate, UITabl
                 self.tableView.reloadData()
             }
         })
+        var refreshControl: UIRefreshControl! = UIRefreshControl()
+        refreshControl.addTarget(self, action: "onRefresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.insertSubview(refreshControl, atIndex: 0)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,43 +63,6 @@ class DVDTableViewController: UITableViewController, UITableViewDelegate, UITabl
         cell.initWithData(self.dvds[indexPath.row] as! NSDictionary)
         return cell
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let cell = sender as! UITableViewCell
@@ -103,5 +71,23 @@ class DVDTableViewController: UITableViewController, UITableViewDelegate, UITabl
         let movie = dvds![indexPath.row] as! NSDictionary
         let detailViewController = segue.destinationViewController as! DetailViewController
         detailViewController.item = movie
+        JTProgressHUD.show()
     }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
+    
+    func onRefresh(refresh:UIRefreshControl) {
+        delay(2, closure: {
+            self.tableView.reloadData()
+            refresh.endRefreshing()
+        })
+    }
+
 }
