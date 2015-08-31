@@ -172,19 +172,19 @@
                                             <rect key="frame" x="8" y="0.0" width="136" height="168"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jT-QD-CH0">
-                                            <rect key="frame" x="152" y="0.0" width="42" height="21"/>
+                                            <rect key="frame" x="152" y="0.0" width="215" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6f-A1-0pa">
-                                            <rect key="frame" x="152" y="29" width="42" height="21"/>
+                                            <rect key="frame" x="152" y="29" width="215" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fZ-bj-nQp">
-                                            <rect key="frame" x="152" y="58" width="215" height="102"/>
+                                            <rect key="frame" x="152" y="65" width="215" height="95"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -192,7 +192,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="poster" destination="pNK-yS-ERg" id="slg-2l-2I1"/>
+                                    <outlet property="poster" destination="2RQ-QM-ADC" id="Vxy-Ns-GzZ"/>
                                     <outlet property="synponys" destination="2fZ-bj-nQp" id="Cz4-GA-ag9"/>
                                     <outlet property="title" destination="2jT-QD-CH0" id="jYy-6a-azv"/>
                                     <outlet property="year" destination="T6f-A1-0pa" id="qE9-Ct-btJ"/>

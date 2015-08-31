@@ -7,20 +7,26 @@
 //
 
 import UIKit
+import AFNetworking
 
 class DVDTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
-    var dvds:NSDictionary!
+    var dvds:NSArray!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        let url = NSURL(string: GlobalConfig.TOP_DVDS_API)
+        let request = NSURLRequest(URL: url!)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            
+            let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
+            if let json = json {
+                self.dvds = json["movies"] as! NSArray
+                self.tableView.reloadData()
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,20 +43,19 @@ class DVDTableViewController: UITableViewController, UITableViewDelegate, UITabl
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 1
+        var result:Int
+        if let items = dvds {
+            result = items.count
+        } else {
+            result = 0
+        }
+        return result
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("DVDCell", forIndexPath: indexPath) as! DVDCell
-
-        // Configure the cell...
-        cell.title.text = "DVD"
-        cell.year.text = "2015"
-        cell.synponys.text = "DVD hello hi"
-
+        cell.initWithData(self.dvds[indexPath.row] as! NSDictionary)
         return cell
     }
     

@@ -11,18 +11,24 @@ import AFNetworking
 
 class MoviesTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
-    var movies:NSDictionary!
+    var movies:NSArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        let url = NSURL(string: GlobalConfig.BOX_OFFICE_API)
+        let request = NSURLRequest(URL: url!)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            
+            let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
+            if let json = json {
+                self.movies = json["movies"] as! NSArray
+                self.tableView.reloadData()
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,18 +45,19 @@ class MoviesTableViewController: UITableViewController, UITableViewDelegate, UIT
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 1
+        var result:Int
+        if let items = movies {
+            result = items.count
+        } else {
+            result = 0
+        }
+        return result
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell", forIndexPath: indexPath) as! MovieCell
-        cell.title.text = "Hello World"
-        cell.year.text = "2015"
-        cell.synopsys.text = "Xin chao"
-
+        cell.initWithData(self.movies[indexPath.row] as! NSDictionary)
         return cell
     }
     
