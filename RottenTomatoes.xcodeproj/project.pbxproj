@@ -133,10 +133,10 @@
 				84A08B411B939A62004D7B7E /* GlobalConfig.swift */,
 				840C56CA1B949A1D0052373E /* MoviesTableViewController.swift */,
 				849B6AE61B9388FD00ADDBA3 /* Images.xcassets */,
+				840C56C71B94990D0052373E /* MovieCell */,
 				840C56CF1B94AED90052373E /* DVDCell */,
 				849B6AE81B9388FD00ADDBA3 /* LaunchScreen.xib */,
 				849B6AE31B9388FD00ADDBA3 /* Main.storyboard */,
-				840C56C71B94990D0052373E /* MovieCell */,
 				849B6ADD1B9388FD00ADDBA3 /* Supporting Files */,
 			);
 			path = RottenTomatoes;

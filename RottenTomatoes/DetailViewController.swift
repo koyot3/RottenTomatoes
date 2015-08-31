@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AFNetworking
 
 class DetailViewController: UIViewController {
 
@@ -20,6 +21,11 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let item = item {
+            name.text = item.valueForKeyPath("title") as! String
+            synopys.text = item.valueForKeyPath("synopsis") as? String
+            poster.setImageWithURL(NSURL(string:item.valueForKeyPath("posters.thumbnail") as! String)!)
+        }
     }
 
     override func didReceiveMemoryWarning() {

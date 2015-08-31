@@ -29,7 +29,7 @@ class DVDCell: UITableViewCell {
     func initWithData(data: NSDictionary!){
         if let item = data {
             title.text = item.valueForKeyPath("title") as? String
-            year.text = item.valueForKeyPath("year") as? String
+            year.text = (String) (item.valueForKeyPath("year") as! Int)
             synponys.text = item.valueForKeyPath("synopsis") as? String
             poster.setImageWithURL(NSURL(string:item.valueForKeyPath("posters.thumbnail") as! String)!)
         }
