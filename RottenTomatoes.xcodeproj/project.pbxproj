@@ -11,6 +11,7 @@
 		840C56CB1B949A1D0052373E /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56CA1B949A1D0052373E /* MoviesTableViewController.swift */; };
 		840C56CE1B94AC130052373E /* DVDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56CD1B94AC130052373E /* DVDTableViewController.swift */; };
 		840C56D11B94AEED0052373E /* DVDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56D01B94AEED0052373E /* DVDCell.swift */; };
+		840C56D31B94B1A20052373E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56D21B94B1A20052373E /* DetailViewController.swift */; };
 		849B6AE01B9388FD00ADDBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B6ADF1B9388FD00ADDBA3 /* AppDelegate.swift */; };
 		849B6AE51B9388FD00ADDBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B6AE31B9388FD00ADDBA3 /* Main.storyboard */; };
 		849B6AE71B9388FD00ADDBA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849B6AE61B9388FD00ADDBA3 /* Images.xcassets */; };
@@ -36,6 +37,7 @@
 		840C56CA1B949A1D0052373E /* MoviesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		840C56CD1B94AC130052373E /* DVDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDTableViewController.swift; sourceTree = "<group>"; };
 		840C56D01B94AEED0052373E /* DVDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDCell.swift; sourceTree = "<group>"; };
+		840C56D21B94B1A20052373E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		849B6ADA1B9388FD00ADDBA3 /* RottenTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B6ADE1B9388FD00ADDBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849B6ADF1B9388FD00ADDBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,16 +127,17 @@
 		849B6ADC1B9388FD00ADDBA3 /* RottenTomatoes */ = {
 			isa = PBXGroup;
 			children = (
-				840C56CF1B94AED90052373E /* DVDCell */,
-				840C56C71B94990D0052373E /* MovieCell */,
 				849B6ADF1B9388FD00ADDBA3 /* AppDelegate.swift */,
-				849B6AE31B9388FD00ADDBA3 /* Main.storyboard */,
-				849B6AE61B9388FD00ADDBA3 /* Images.xcassets */,
-				849B6AE81B9388FD00ADDBA3 /* LaunchScreen.xib */,
-				849B6ADD1B9388FD00ADDBA3 /* Supporting Files */,
+				840C56D21B94B1A20052373E /* DetailViewController.swift */,
+				840C56CD1B94AC130052373E /* DVDTableViewController.swift */,
 				84A08B411B939A62004D7B7E /* GlobalConfig.swift */,
 				840C56CA1B949A1D0052373E /* MoviesTableViewController.swift */,
-				840C56CD1B94AC130052373E /* DVDTableViewController.swift */,
+				849B6AE61B9388FD00ADDBA3 /* Images.xcassets */,
+				840C56CF1B94AED90052373E /* DVDCell */,
+				849B6AE81B9388FD00ADDBA3 /* LaunchScreen.xib */,
+				849B6AE31B9388FD00ADDBA3 /* Main.storyboard */,
+				840C56C71B94990D0052373E /* MovieCell */,
+				849B6ADD1B9388FD00ADDBA3 /* Supporting Files */,
 			);
 			path = RottenTomatoes;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				840C56C91B9499590052373E /* MovieCell.swift in Sources */,
 				84A08B421B939A62004D7B7E /* GlobalConfig.swift in Sources */,
 				840C56CE1B94AC130052373E /* DVDTableViewController.swift in Sources */,
+				840C56D31B94B1A20052373E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
