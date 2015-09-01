@@ -25,14 +25,8 @@ class DetailViewController: UIViewController {
         if let item = item {
             name.text = item.valueForKeyPath("title") as? String
             synopys.text = item.valueForKeyPath("synopsis") as? String
-            //poster.setImageWithURL(NSURL(string:item.valueForKeyPath("posters.thumbnail") as! String)!)
-            let urlReq = NSURLRequest(URL: NSURL(string: item.valueForKeyPath("posters.thumbnail") as! String!)!)
-            poster.setImageWithURLRequest(urlReq, placeholderImage: nil, success: {(request:NSURLRequest!,response:NSHTTPURLResponse!, image:UIImage!) -> Void in
-                
-                }, failure: {(request:NSURLRequest!,response:NSHTTPURLResponse!, error:NSError!) -> Void in
-                    //self.navigationController?.title = "No network!"
-                })
-        }
+            poster.setImageWithURL(NSURL(string:item.valueForKeyPath("posters.detailed") as! String)!)
+                    }
         JTProgressHUD.hide()
     }
 
