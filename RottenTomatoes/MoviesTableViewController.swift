@@ -12,6 +12,7 @@ import JTProgressHUD
 
 class MoviesTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     var movies:NSArray!
     
     override func viewDidLoad() {
@@ -23,11 +24,16 @@ class MoviesTableViewController: UITableViewController, UITableViewDelegate, UIT
         let url = NSURL(string: GlobalConfig.BOX_OFFICE_API)
         let request = NSURLRequest(URL: url!)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            if (data != nil){
             
-            let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
-            if let json = json {
-                self.movies = json["movies"] as! NSArray
+            if let dict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error:nil) as? NSDictionary {
+                self.movies = dict["movies"] as! NSArray
                 self.tableView.reloadData()
+            } else {
+                self.searchBar.text = "No network"
+            }
+            } else {
+                self.searchBar.text = "No network"
             }
         })
         

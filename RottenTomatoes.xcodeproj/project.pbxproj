@@ -12,6 +12,7 @@
 		840C56CE1B94AC130052373E /* DVDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56CD1B94AC130052373E /* DVDTableViewController.swift */; };
 		840C56D11B94AEED0052373E /* DVDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56D01B94AEED0052373E /* DVDCell.swift */; };
 		840C56D31B94B1A20052373E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C56D21B94B1A20052373E /* DetailViewController.swift */; };
+		843FED7F1B94DD3800C4CF77 /* Hoang-RottenTomatoes.gif in Resources */ = {isa = PBXBuildFile; fileRef = 843FED7E1B94DD3800C4CF77 /* Hoang-RottenTomatoes.gif */; };
 		849B6AE01B9388FD00ADDBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B6ADF1B9388FD00ADDBA3 /* AppDelegate.swift */; };
 		849B6AE51B9388FD00ADDBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849B6AE31B9388FD00ADDBA3 /* Main.storyboard */; };
 		849B6AE71B9388FD00ADDBA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849B6AE61B9388FD00ADDBA3 /* Images.xcassets */; };
@@ -38,6 +39,7 @@
 		840C56CD1B94AC130052373E /* DVDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDTableViewController.swift; sourceTree = "<group>"; };
 		840C56D01B94AEED0052373E /* DVDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVDCell.swift; sourceTree = "<group>"; };
 		840C56D21B94B1A20052373E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		843FED7E1B94DD3800C4CF77 /* Hoang-RottenTomatoes.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Hoang-RottenTomatoes.gif"; sourceTree = "<group>"; };
 		849B6ADA1B9388FD00ADDBA3 /* RottenTomatoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenTomatoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B6ADE1B9388FD00ADDBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		849B6ADF1B9388FD00ADDBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		849B6AD11B9388FD00ADDBA3 = {
 			isa = PBXGroup;
 			children = (
+				843FED7E1B94DD3800C4CF77 /* Hoang-RottenTomatoes.gif */,
 				849B6ADC1B9388FD00ADDBA3 /* RottenTomatoes */,
 				849B6AF21B9388FD00ADDBA3 /* RottenTomatoesTests */,
 				849B6ADB1B9388FD00ADDBA3 /* Products */,
@@ -252,6 +255,7 @@
 			files = (
 				849B6AE51B9388FD00ADDBA3 /* Main.storyboard in Resources */,
 				849B6AEA1B9388FD00ADDBA3 /* LaunchScreen.xib in Resources */,
+				843FED7F1B94DD3800C4CF77 /* Hoang-RottenTomatoes.gif in Resources */,
 				849B6AE71B9388FD00ADDBA3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

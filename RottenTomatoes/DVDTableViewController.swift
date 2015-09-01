@@ -13,6 +13,7 @@ import JTProgressHUD
 class DVDTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     var dvds:NSArray!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
@@ -21,11 +22,15 @@ class DVDTableViewController: UITableViewController, UITableViewDelegate, UITabl
         let url = NSURL(string: GlobalConfig.TOP_DVDS_API)
         let request = NSURLRequest(URL: url!)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            
-            let json = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as? NSDictionary
-            if let json = json {
-                self.dvds = json["movies"] as! NSArray
+            if (data != nil){
+            if let dict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error:nil) as? NSDictionary {
+                self.dvds = dict["movies"] as! NSArray
                 self.tableView.reloadData()
+            } else {
+                self.searchBar.text = "No network"
+            }
+            } else {
+                self.searchBar.text = "No network"
             }
         })
         var refreshControl: UIRefreshControl! = UIRefreshControl()
@@ -42,8 +47,6 @@ class DVDTableViewController: UITableViewController, UITableViewDelegate, UITabl
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
 
