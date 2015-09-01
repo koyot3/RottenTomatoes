@@ -95,7 +95,21 @@ class MoviesTableViewController: UITableViewController, UITableViewDelegate, UIT
     
     func onRefresh(refresh:UIRefreshControl) {
         delay(2, closure: {
-            self.tableView.reloadData()
+            let url = NSURL(string: GlobalConfig.BOX_OFFICE_API)
+            let request = NSURLRequest(URL: url!)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+                if (data != nil){
+                    
+                    if let dict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error:nil) as? NSDictionary {
+                        self.movies = dict["movies"] as! NSArray
+                        self.tableView.reloadData()
+                    } else {
+                        self.searchBar.text = "No network"
+                    }
+                } else {
+                    self.searchBar.text = "No network"
+                }
+            })
             refresh.endRefreshing()
         })
     }

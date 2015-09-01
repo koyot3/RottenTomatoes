@@ -88,7 +88,20 @@ class DVDTableViewController: UITableViewController, UITableViewDelegate, UITabl
     
     func onRefresh(refresh:UIRefreshControl) {
         delay(2, closure: {
-            self.tableView.reloadData()
+            let url = NSURL(string: GlobalConfig.TOP_DVDS_API)
+            let request = NSURLRequest(URL: url!)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+                if (data != nil){
+                    if let dict = NSJSONSerialization.JSONObjectWithData(data, options: nil, error:nil) as? NSDictionary {
+                        self.dvds = dict["movies"] as! NSArray
+                        self.tableView.reloadData()
+                    } else {
+                        self.searchBar.text = "No network"
+                    }
+                } else {
+                    self.searchBar.text = "No network"
+                }
+            })
             refresh.endRefreshing()
         })
     }
